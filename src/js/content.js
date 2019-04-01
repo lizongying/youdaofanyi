@@ -53,7 +53,7 @@ window.onload = () => {
             ul.insertBefore(li, ul.childNodes[0]);
             clearInterval(intervalExport);
             a.onclick = function () {
-                const content = document.querySelector('#docTranslationText').innerHTML;
+                const content = document.querySelector('#docTranslationText').innerHTML.replace(/<div class="rengong_notice.*\n*.*\n*.*\n*.*\n*.*/m, '');
                 const blob = new Blob([content], {type: 'application/text/html'});
                 a.href = URL.createObjectURL(blob);
                 a.download = new Date().getTime() + '.html';
