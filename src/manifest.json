@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "有道翻译",
+  "version": "0.0.3",
+  "description": "有道翻译增加全屏和导出功能",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs"
+  ],
+  "web_accessible_resources": [
+    "hook.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://fanyi.youdao.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "http://fanyi.youdao.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
