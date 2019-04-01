@@ -1,2 +1,2 @@
-# whatsapp-groups
-Whatsapp 加群、群发
+# 有道翻译
+有道翻译增加全屏和导出功能
